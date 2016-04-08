@@ -5,12 +5,8 @@ import com.amazonaws.services.kinesis.samples.stocktrades.writer.StockTradeGener
 import com.datakinesis.KinesisProducer;
 import com.datakinesis.Serde;
 
-public class Producer {
+public class Producer extends Parameters {
 	public static void main(String[] args) {
-		String streamName = "stocktrade_stream";
-		String appName = "stocktrade_app";
-		String appVersion = "1.0.0";
-		String regionName = "us-west-2";
 		Serde serde = new StockTradeSerde();
 		KinesisProducer kinesisProducer=null;
 		int numTrades = 0;

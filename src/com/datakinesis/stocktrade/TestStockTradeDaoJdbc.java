@@ -14,14 +14,9 @@ import com.amazonaws.services.kinesis.samples.stocktrades.writer.StockTradeGener
  *  	StockTableDaoJdbc
  *  all are working correctly before putting it through a kinesis stream 
  */
-public class TestStockTradeDaoJdbc {
+public class TestStockTradeDaoJdbc extends Parameters {
 	static public void main(String[] args) {
-		// parameters
 		StockTradeGenerator generator = null;
-		String driverName = "com.mysql.jdbc.Driver";
-		String URL = "jdbc:mysql://ec2-52-38-170-165.us-west-2.compute.amazonaws.com:3306/stocktrade";
-		String usr = "aperio";
-		String pwd = "aperio9";
 
 		try {
 			// create Dao object
